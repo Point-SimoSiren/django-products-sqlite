@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 style="color: blue">All Products</h1>
+{% for p in products %}
+<h2 style="color: blue">{{p.productname}}</h2>
+{%endfor%}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 style="color: blue">All Suppliers</h1>
+
+{% for s in suppliers %}
+<h2 style="color: blue">{{s.companyname}}</h2>
+<p style="color: red">{{s.contactname}}</p>
+{%endfor%}
+
+{% endblock %}
