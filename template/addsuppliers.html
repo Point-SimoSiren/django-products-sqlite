@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 style="color: blue">Add new Supplier</h1>
+<hr />
+<div class="card" style="width: 70rem;">
+    <div class="card-body">
+        <form method="post" action="/addsupplier/">
+
+            {%csrf_token %}
+            <input type="text" name="companyname">
+            <input type="text" name="contactname">
+            <input type="text" name="phone">
+            <input type="text" name="email">
+            <input type="text" name="address">
+            <input type="text" name="city">
+
+            <input type="submit" value="Add" class="btn btn-success" name="">
+        </form>
+    </div>
+</div>
+{% endblock %}

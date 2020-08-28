@@ -11,3 +11,8 @@ def productlistview(request):
     productlist = Product.objects.all()
     context = {'products': productlist}
     return render (request,"products.html",context)
+
+def addsupplier(request):
+    newsupplier = request.POST['supplier']
+    Supplier(supplier = newsupplier).save()
+    return redirect(request.META['HTTP_REFERER'])
