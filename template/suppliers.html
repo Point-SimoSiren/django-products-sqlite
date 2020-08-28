@@ -18,8 +18,9 @@
             <p class="card-text">{{s.contactname}} | phone: {{s.phone}} | email: {{s.email}} </p>
             <p class="card-text">Address: {{s.address}} | Country: {{s.country}}</p>
 
-            <a href="#" class="btn btn-primary">Edit</a> <a href="#" class="btn btn-danger">Delete</a>
-            <a href="#" class="btn btn-secondary">Products</a>
+            <a href="#" class="btn btn-primary">Edit</a> <a href="/deletesupplier/{{s.id}}/"
+                class="btn btn-danger">Delete</a>
+            <a href="#" class="btn btn-secondary">{{s.companyname}} Products</a>
     </div>
 </div>
 
@@ -37,13 +38,13 @@
                 {%csrf_token %}
                 <input class="card-text" class="card-text" type="text" placeholder="company´s name" name="companyname">
                 <input class="card-text" type="text" placeholder="contact person" name="contactname">
-                <input class="card-text" type="text" placeholder="phone number" name="phone">
+                <input class="card-text" type="text" placeholder="address" name="address">
+                <input class="card-text" type="text" placeholder="phone" name="phone">
                 <input class="card-text" type="text" placeholder="email" name="email">
-                <input class="card-text" type="text" placeholder="adress" name="address">
-                <input class="card-text" type="text" placeholder="contry" name="country">
+                <input class="card-text" type="text" placeholder="country" name="country">
                 <br/>
                 <input type="submit" value="Confirm" class="btn btn-success btn-sm" name="">
-                <input type="submit" id="hide-btn" class="btn btn-secondary btn-sm" onclick="hideaddform()" value="Cancel">
+                <input type="submit" id="hide-btn" class="btn btn-secondary btn-sm" onclick="hideaddform()" value="Cancel" name="">
             </form>
         </div>
     </div>`
